@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login</title>
+		<link rel="stylesheet" href="../styles/login.css" type="text/css">
+	</head>
+	<body>
+		<div class="hero">
+			<header>
+				<nav>
+					<ul class="nav__links">
+						<li><a href="./register.html">Sign Up</a></li>
+					</ul>
+				</nav>
+				<p class="nav--title">Our Gallery</p>
+				<div class="none"></div>
+			</header>
+			<div class="login--wrapper">
+				<h1 class="login--h1">Log In</h1>
+				<h4 class="login--h4">The last straight to admire the views</h4>
+				<form method="get" class="login--box" name="log_form" onsubmit="return setAction(this)">
+					<label>Username</label>
+					<input 
+						type="text" 
+						autocomplete="off"
+						name="username"
+						required
+					>
+					</input>
+					<label>Password</label>
+					<input 
+						type="password" 
+						name="password" 
+						autocomplete="on"
+						required
+					>
+					</input>
+					<button class="button-52">Log in</button>
+					<div class="info"></div>
+				</form>
+			</div>
+		</div>
+		<script src="../js/login.js"></script>
+	</body>
+</html>

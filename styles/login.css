@@ -1,0 +1,140 @@
+*,
+::before,
+::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: "Open Sans", sans-serif;
+}
+
+.hero {
+	z-index: -1;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+		url("../images/back.jpg");
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+}
+
+header li,
+a {
+	font-weight: 500;
+	font-size: 18px;
+	text-decoration: none;
+	color: #000;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 10%;
+	background-color: rgba(238, 236, 220, 0.4);
+}
+
+.nav__links {
+	list-style: none;
+}
+
+.nav__links li {
+	display: inline-block;
+	padding: 0 20px;
+}
+
+.nav__links li a {
+	transition: all 0.3 ease 0s;
+}
+
+.nav__links li a:hover {
+	color: #4c4a37;
+}
+
+.none {
+	display: none;
+}
+
+.login--wrapper {
+	width: 460px;
+	height: 390px;
+	margin: 50px auto;
+	background-color: rgba(238, 236, 220, 0.8);
+	border-radius: 10px;
+}
+
+.login--h1 {
+	text-align: center;
+	padding-top: 15px;
+	margin-bottom: 5px;
+}
+
+.login--h4 {
+	text-align: center;
+}
+
+.login--box {
+	width: 350px;
+	margin: 0 auto;
+}
+
+.login--box label {
+	display: flex;
+	margin-top: 20px;
+	font-size: 18px;
+}
+
+.login--box input {
+	width: 100%;
+	padding: 7px;
+	border: none;
+	border-radius: 6px;
+	border: 1px solid gray;
+	outline: none;
+}
+
+.button-52 {
+	text-align: center;
+	font-size: 20px;
+	font-weight: 200;
+	letter-spacing: 1px;
+	padding: 13px 20px 13px;
+	outline: 0;
+	border: 1px solid black;
+	cursor: pointer;
+	position: relative;
+	background-color: rgba(0, 0, 0, 0);
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	margin: 35px auto;
+	width: 70%;
+	display: flex;
+	justify-content: center;
+}
+
+.button-52:after {
+	content: "";
+	background-color: #ffe54c;
+	width: 100%;
+	z-index: -1;
+	position: absolute;
+	height: 100%;
+	top: 7px;
+	left: 7px;
+	transition: 0.2s;
+}
+
+.button-52:hover:after {
+	top: 0px;
+	left: 0px;
+}
+
+@media (min-width: 768px) {
+	.button-52 {
+		padding: 13px 50px 13px;
+	}
+}

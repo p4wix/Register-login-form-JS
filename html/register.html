@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Register</title>
+		<link rel="stylesheet" href="../styles/register.css" type="text/css" />
+	</head>
+	<body>
+		<div class="hero">
+			<header>
+				<nav>
+					<ul class="nav__links">
+						<li><a href="./login.html">Log In</a></li>
+					</ul>
+				</nav>
+				<p class="nav--title">Our Gallery</p>
+				<div class="none"></div>
+			</header>
+			<div class="signup--wrapper">
+				<h1 class="signup--h1">Sign Up</h1>
+				<h4 class="signup--h4">It's free and you can admire the views</h4>
+				<form method="get" class="signup--box" name="reg_form" onsubmit="return setAction(this)">
+					<label>Email</label>
+					<input 
+						type="email" 
+						autocomplete="off"
+						name="email"
+						required
+					>
+					</input>
+					<label>Confirm email</label>
+					<input 
+						type="email" 
+						autocomplete="off"
+						name="conf_email"
+						required
+					>
+					</input>
+					<label>Username</label>
+					<input 
+						type="text" 
+						autocomplete="off"
+						name="username"
+						minlength="6" 
+						maxlength="20"
+						required
+					>
+					</input>
+					<label>Password</label>
+					<input 
+						type="password" 
+						name="password" 
+						autocomplete="on"
+						minlength="6"
+					>
+					</input>
+					<button 
+						class="button-52"
+					>
+						Submit
+					</button>
+				<div class="info"></div>
+				</form>
+			</div>
+		</div>
+		<script src="../js/main.js"></script>
+	</body>
+</html>
