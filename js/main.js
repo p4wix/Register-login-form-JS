@@ -20,38 +20,64 @@ const storeData = () => {
 		password: password.hashCode(),
 	};
 
+	let isAlreadyMail = 0;
+	let isAlreadyUsername = 0;
+
 	for (let i = 0; i < localStorage.length; i++) {
 		const item = JSON.parse(localStorage.getItem(localStorage.key(i)));
 		if (obj.email === item.email) {
-			console.log("Juz jest takie konto takiej nazwie maila");
-			info("Juz jest takie konto takiej nazwie maila");
-			return false;
-		} else if (obj.username === item.username) {
-			console.log("Juz jest takie konto o takiej nazwie usera");
-			info("Juz jest takie konto o takiej nazwie usera");
-			return false;
-		} else {
-			console.log("Poprawie dodany user");
-			localStorage.setItem(key, JSON.stringify(obj));
-			return true;
+			isAlreadyMail = 1;
+			console.log(i);
+			break;
 		}
 	}
+
+	for (let i = 0; i < localStorage.length; i++) {
+		const item = JSON.parse(localStorage.getItem(localStorage.key(i)));
+		if (obj.username === item.username) {
+			isAlreadyUsername = 1;
+			console.log(i);
+			break;
+		}
+	}
+
+	if (isAlreadyMail || isAlreadyUsername) {
+		info("Ktoś taki juz istnieje");
+	} else {
+		console.log("Poprawie dodany user");
+		localStorage.setItem(key, JSON.stringify(obj));
+		return true;
+	}
+
+	//for (let i = 0; i < localStorage.length; i++) {
+	//	const item = JSON.parse(localStorage.getItem(localStorage.key(i)));
+	//	if (obj.email === item.email) {
+	//		console.log("Juz jest takie konto takiej nazwie maila");
+	//		info("Juz jest takie konto takiej nazwie maila");
+	//		return false;
+	//	}
+	//	if (obj.username === item.username) {
+	//		console.log("Juz jest takie konto o takiej nazwie usera");
+	//		info("Juz jest takie konto o takiej nazwie usera");
+	//		return false;
+	//	}
+	//}
+
 	if (localStorage.length === 0) {
 		localStorage.setItem(key, JSON.stringify(obj));
 	}
 };
 
 const setAction = (form) => {
-	storeData();
-	let bool = storeData;
+	let bool = storeData();
 	if (bool) {
 		form.action = "user.html";
+		return true;
 	} else {
 		form.action = "register.html";
 		document.querySelector(".signup--box").reset();
 		return false;
 	}
-	return true;
 };
 
 const info = (text) => {
@@ -82,5 +108,3 @@ const hashCode = (s) =>
 		a = (a << 5) - a + b.charCodeAt(0);
 		return a & a;
 	}, 0);
-
-export default { info };

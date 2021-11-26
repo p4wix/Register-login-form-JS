@@ -20,12 +20,19 @@ html {
 }
 
 .card {
+	position: relative;
 	background-color: #eee;
 	border-radius: 10px;
-	padding: 8px;
+	padding: 0 0 8px 0;
+	transition: 0.3s ease;
+	text-align: center;
+}
+
+.card_text {
 }
 
 img {
+	cursor: pointer;
 	width: 70vw;
 	height: 30vh;
 	border-radius: 10px;

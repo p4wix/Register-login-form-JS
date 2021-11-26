@@ -1,5 +1,3 @@
-import { info } from "./main";
-
 const checkToLogIn = () => {
 	const data = document.forms["log_form"];
 
